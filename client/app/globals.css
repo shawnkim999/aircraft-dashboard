@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: Inter-Italic;
+  src: url(./assets/fonts/Inter-Italic-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: InstrumentSerif;
+  src: url(./assets/fonts/InstrumentSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: InstrumentSerif-Italic;
+  src: url(./assets/fonts/InstrumentSerif-Italic.ttf);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#heading-section {
+  margin: 2rem 4vw;
+}
+
+button {
+  margin-right: 1rem;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.search {
+  border: gray 2px solid;
+}
+
+input, label {
+  margin-right: 1rem;
+}
+
+@media (max-width: 900px) {
+  #input-container {
+    flex-direction: column;
+  }
+}
